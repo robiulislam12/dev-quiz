@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <section className='container home-container lg:py-12 mx-auto padding'>
       <HeroSection/>
-      <h3 className="text-3xl mb-6 mt-3">Here all our <span className='text-green-500 font-medium underline'>Quiz Topic</span></h3>
+      <h3 className="text-3xl mb-6  mt-3">Here all our <span className='text-green-500 font-medium underline'>Quiz Topic</span></h3>
       <section className='grid gap-4 lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1'> 
         {
           topics.map(topic => <div key={topic.id} className='bg-white p-3 shadow rounded-lg'>
