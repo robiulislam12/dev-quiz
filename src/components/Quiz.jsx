@@ -1,7 +1,16 @@
 import React from "react";
 
 const Quiz = ({ question }) => {
-  const { options, question: qtion } = question;
+  const { options, question: qtion, correctAnswer } = question;
+
+  const answerCheckHandler = (choiceAnswer) => {
+    if (choiceAnswer === correctAnswer) {
+      alert("Correct Answer");
+    } else {
+      alert("Wrong Answer");
+    }
+  };
+
   return (
     <div className="bg-white p-4 shadow rounded my-4">
       <div className="">
@@ -11,6 +20,7 @@ const Quiz = ({ question }) => {
             <button
               className="border rounded p-4 hover:bg-green-400 w-full duration-200"
               key={index}
+              onClick={() => answerCheckHandler(option)}
             >
               {option}
             </button>

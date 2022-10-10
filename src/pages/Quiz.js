@@ -6,12 +6,12 @@ const Quiz = () => {
   const topic = useLoaderData();
   const { name, questions } = topic.data;
   return (
-    <div className="md:container md:mx-auto lg:py-12">
+    <div className="container mx-auto lg:py-12 sm:py-8 padding">
       <h2 className="text-4xl text-center">
         Quiz of <span className="text-green-600 font-semibold ">{name}</span>
       </h2>
 
-      <div className="w-6/12 mx-auto">
+      <div className="lg:w-6/12 md:w-full sm:w-full mx-auto">
         {questions.map((question) => (
           <QuizComponent key={question.id} question={question} />
         ))}
