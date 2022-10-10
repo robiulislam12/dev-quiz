@@ -27,3 +27,19 @@ ul li {
 a {
   text-decoration: none;
 }
+
+.flex_nav {
+  display: flex;
+  flex-direction: column;
+
+}
+
+@media only screen and (max-width:667px) {
+  .nav_link {
+    display: none;
+  }
+
+  header>div {
+    padding: 0px 10px;
+  }
+}
