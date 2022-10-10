@@ -39,7 +39,8 @@ a {
     display: none;
   }
 
-  header>div {
+  header>div,
+  .padding {
     padding: 0px 10px;
   }
 }
