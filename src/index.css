@@ -1,8 +1,23 @@
+/* Tailwind css import */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Google Outfit font */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap');
+
+/* Common CSS */
 *,
 html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  background-color: #f1f1f1;
+  font-family: 'Outfit', sans-serif;
 }
 
 ul li {
