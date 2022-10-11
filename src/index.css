@@ -43,4 +43,9 @@ a {
   .padding {
     padding: 0px 10px;
   }
+
+  /* Rechart responsive */
+  .responsive {
+    display: none;
+  }
 }
