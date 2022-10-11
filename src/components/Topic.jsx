@@ -15,7 +15,7 @@ const Topic = ({ topic }) => {
         </div>
         <Link to={`/topics/${topic.id}`}>
           <button className="flex items-center bg-blue-500 py-2 px-4 rounded-lg text-white font-medium hover:bg-blue-700 mt-3">
-            Start Practice <AiOutlineArrowRight />{" "}
+            Start Practice <AiOutlineArrowRight />
           </button>
         </Link>
       </div>

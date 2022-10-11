@@ -44,6 +44,10 @@ a {
     padding: 0px 10px;
   }
 
+  .hero-section .content {
+    flex-direction: column;
+  }
+
   /* Rechart responsive */
   .responsive {
     display: none;
