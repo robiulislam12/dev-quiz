@@ -1,13 +1,14 @@
 import React from "react";
+import { toast, ToastContainer } from "react-toastify";
 
 const Quiz = ({ question }) => {
   const { options, question: qtion, correctAnswer } = question;
 
   const answerCheckHandler = (choiceAnswer) => {
     if (choiceAnswer === correctAnswer) {
-      alert("Correct Answer");
+      toast.success("Correct Answer!", { autoClose: 300 });
     } else {
-      alert("Wrong Answer");
+      toast.error("Wrong Answer!", { autoClose: 300 });
     }
   };
 
@@ -27,6 +28,7 @@ const Quiz = ({ question }) => {
           ))}
         </div>
       </div>
+      <ToastContainer autoClose={3000} />
     </div>
   );
 };
