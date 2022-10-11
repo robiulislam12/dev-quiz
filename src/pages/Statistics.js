@@ -39,8 +39,8 @@ const Statistics = () => {
 
         {/* it's fot mobile */}
         <ComposedChart
-          width={350} 
-          height={250} 
+          width={250} 
+          height={200} 
           data={data}
           className="padding mt-6 lg:hidden"
           >
