@@ -1,4 +1,5 @@
 import React from "react";
+import { BsFillEyeFill } from "react-icons/bs";
 import { toast, ToastContainer } from "react-toastify";
 
 const Quiz = ({ question }) => {
@@ -6,16 +7,26 @@ const Quiz = ({ question }) => {
 
   const answerCheckHandler = (choiceAnswer) => {
     if (choiceAnswer === correctAnswer) {
-      toast.success("Correct Answer!", { autoClose: 300 });
+      toast.success("Correct Answer!");
     } else {
-      toast.error("Wrong Answer!", { autoClose: 300 });
+      toast.error("Wrong Answer!");
     }
+  };
+
+  const handleShowCorrectAnswer = (answer) => {
+    const rightAnswer = `${options.indexOf(answer) + 1}. ${answer}`;
+    toast.success(rightAnswer);
   };
 
   return (
     <div className="bg-white p-4 shadow rounded my-4">
       <div className="">
-        <h3 className="text-2xl text-center">{qtion}</h3>
+        <div className="flex justify-between">
+          <h3 className="text-lg text-center pr-4">{qtion}</h3>
+          <button onClick={() => handleShowCorrectAnswer(correctAnswer)}>
+            <BsFillEyeFill className="text-3xl cursor-pointer " />
+          </button>
+        </div>
         <div className="my-2 grid gap-3 lg:grid-cols-2 md:grid-cols-1 ">
           {options.map((option, index) => (
             <button
@@ -23,12 +34,12 @@ const Quiz = ({ question }) => {
               key={index}
               onClick={() => answerCheckHandler(option)}
             >
-              {option}
+              {options.indexOf(option) + 1}. {option}
             </button>
           ))}
         </div>
       </div>
-      <ToastContainer autoClose={3000} />
+      <ToastContainer autoClose={2000} />
     </div>
   );
 };
